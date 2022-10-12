@@ -1,0 +1,58 @@
+:root {
+  --slidev-theme-primary: #3C53BA;
+}
+
+h1,
+h1 + p,
+p:last-child {
+  @apply font-semibold opacity-80;
+}
+
+h1 + p {
+  @apply -mt-2 mb-4;
+}
+
+p:last-child {
+  @apply my-8;
+}
+
+html:not(.dark) {
+  h1, p {
+    @apply bg-gradient-to-r from-[#3C53BA] to-[#624284] bg-clip-text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h3, li, td {
+    @apply text-[#474747];
+  }
+}
+
+html.dark {
+  h1, h3, p, li, td {
+    @apply opacity-80 text-[#FFF];
+  }
+}
+
+.slidev-layout {
+  &.cover,
+  &.center {
+    @apply h-full grid bg-gradient-to-r from-[#3C53BA] to-[#624284] text-[#FFF];
+
+    h1 {
+      @apply text-6xl leading-20;
+    }
+
+    h1, p {
+      @apply opacity-80 text-[#FFF] bg-none;
+      -webkit-text-fill-color: currentColor;
+    }
+
+    h1 + p {
+      @apply -mt-2 mb-4 text-lg font-semibold;
+    }
+
+    p + h2, ul + h2, table + h2 {
+      @apply mt-10;
+    }
+  }
+}
