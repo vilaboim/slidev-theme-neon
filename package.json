@@ -1,0 +1,55 @@
+{
+  "name": "slidev-theme-neon",
+  "description": "A neon theme for Slidev",
+  "version": "0.0.0",
+  "author": {
+    "name": "Lucas Vilaboim",
+    "email": "lucas@vilaboim.com",
+    "url": "http://vilaboim.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vilaboim/slidev-theme-neon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vilaboim/slidev-theme-neon/issues"
+  },
+  "homepage": "https://github.com/vilaboim/slidev-theme-neon#readme",
+  "keywords": [
+    "neon",
+    "slidev",
+    "slidev-theme",
+    "vilaboim"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0",
+    "slidev": ">=0.36.5"
+  },
+  "scripts": {
+    "build": "slidev build example.md",
+    "dev": "slidev example.md --open",
+    "export": "slidev export example.md",
+    "screenshot": "slidev export example.md --format png"
+  },
+  "dependencies": {
+    "@slidev/types": "^0.36.6",
+    "codemirror-theme-vars": "^0.1.1",
+    "prism-theme-vars": "^0.2.4"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.36.6",
+    "playwright-chromium": "^1.27.0"
+  },
+  "slidev": {
+    "colorSchema": "both",
+    "highlighter": "all",
+    "defaults": {
+      "fonts": {
+        "sans": "Fira Sans",
+        "mono": "Fira Code"
+      },
+      "highlighter": "prism"
+    }
+  }
+}
