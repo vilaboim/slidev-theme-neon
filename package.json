@@ -49,7 +49,7 @@
         "sans": "Fira Sans",
         "mono": "Fira Code"
       },
-      "highlighter": "prism"
+      "highlighter": "shiki"
     }
   }
 }
