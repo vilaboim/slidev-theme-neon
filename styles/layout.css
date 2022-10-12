@@ -1,48 +1,61 @@
 :root {
-  --slidev-theme-primary: #3C53BA;
-}
-
-h1,
-h1 + p,
-p:last-child {
-  @apply font-semibold opacity-80;
-}
-
-h1 + p {
-  @apply -mt-2 mb-4;
-}
-
-p:last-child {
-  @apply my-8;
-}
-
-html:not(.dark) {
-  h1, p {
-    @apply bg-gradient-to-r from-[#3C53BA] to-[#624284] bg-clip-text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  h3, li, td {
-    @apply text-[#474747];
-  }
-}
-
-html.dark {
-  h1, h3, p, li, td {
-    @apply opacity-80 text-[#FFF];
-  }
+  --slidev-theme-primary: #6B53D9;
 }
 
 .slidev-layout {
+  h1,
+  h2,
+  h3,
+  h1 + p,
+  p:last-child {
+    @apply font-semibold opacity-80;
+  }
+
+  h1,
+  h2,
+  h3,
+  h1 + p {
+    @apply bg-gradient-to-r from-[#6B53D9] to-[#624284] bg-clip-text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h1 + p {
+    @apply -mt-3 mb-4;
+  }
+
+  h1 + p,
+  h1 + ul,
+  h2,
+  h3 {
+    @apply mb-4;
+  }
+
+  p:last-child {
+    @apply mt-8;
+  }
+
+  h1 strong {
+    @apply bg-none bg-clip-border;
+    -webkit-text-fill-color: currentColor;
+  }
+
+  h3,
+  p,
+  li,
+  td {
+    @apply text-[#474747];
+  }
+
   &.cover,
   &.center {
-    @apply h-full grid bg-gradient-to-r from-[#3C53BA] to-[#624284] text-[#FFF];
+    @apply h-full grid bg-gradient-to-r from-[#6B53D9] to-[#624284] text-[#FFF];
 
     h1 {
       @apply text-6xl leading-20;
     }
 
-    h1, p {
+    h1,
+    p {
       @apply opacity-80 text-[#FFF] bg-none;
       -webkit-text-fill-color: currentColor;
     }
@@ -51,8 +64,21 @@ html.dark {
       @apply -mt-2 mb-4 text-lg font-semibold;
     }
 
-    p + h2, ul + h2, table + h2 {
+    p + h2,
+    ul + h2,
+    table + h2 {
       @apply mt-10;
     }
+  }
+}
+
+html.dark {
+  h1,
+  h3,
+  p,
+  li,
+  td {
+    @apply bg-none opacity-80 text-[#FFF];
+    -webkit-text-fill-color: currentColor;
   }
 }
