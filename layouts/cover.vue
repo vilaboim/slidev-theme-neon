@@ -1,7 +1,7 @@
 <template>
-  <div class="slidev-layout cover">
-    <div class="my-auto w-full">
+  <section class="slidev-layout cover">
+    <article class="my-auto w-full">
       <slot />
-    </div>
-  </div>
+    </article>
+  </section>
 </template>
